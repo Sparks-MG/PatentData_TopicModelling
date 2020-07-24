@@ -81,7 +81,7 @@ The file introduction.ipynb features a CRISP-DM approach and contains further in
 
 ### Eample Screenshots of the App
 
-![HOME](\app\example_images_app/dashboardPreview.png)
+![HOME](app\example_images_app/dashboardPreview.png)
 _The dashboard of the project features a navbar with different useful links as well as detailed and interative plotly visualizations._
 
 
