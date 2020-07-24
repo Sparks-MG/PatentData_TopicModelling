@@ -81,21 +81,25 @@ The file introduction.ipynb features a CRISP-DM approach and contains further in
 
 ### Eample Screenshots of the App
 
-![HOME](app\example_images_app/dashboardPreview.png)
+![HOME](app/example_images_app/dashboardPreview.png)
 _The dashboard of the project features a navbar with different useful links as well as detailed and interative plotly visualizations._
 
 
 ![HOME](wordClouds/A_Topic_3.png)
+
 _Exmparily word cloud of the latent topic 3 of the patent section A is related to chemcial compounds._
 
 
 ![HOME](wordClouds/C_Topic_0.png)
+
 _Exmparily word cloud of the latent topic 0 of the patent section C is related to biochemistry._
 
 ![HOME](wordClouds/G_Topic_1.png)
+
 _Exmparily word cloud of the latent topic 1 of the patent section G is related to processing digital signals and image detection._
 
 ![HOME](wordClouds/G_Topic_3.png)
+
 _Exmparily word cloud of the latent topic 1 of the patent section G is related to sensor technology and measurements._
 
 ### Information on the model
