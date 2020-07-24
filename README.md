@@ -87,20 +87,20 @@ _The dashboard of the project features a navbar with different useful links as w
 
 ![HOME](wordClouds/A_Topic_3.png)
 
-_Exmparily word cloud of the latent topic 3 of the patent section A is related to chemcial compounds._
+_Exmparily word cloud of the latent topic 3 of the patent section A. The topic is related to chemcial compounds._
 
 
 ![HOME](wordClouds/C_Topic_0.png)
 
-_Exmparily word cloud of the latent topic 0 of the patent section C is related to biochemistry._
+_Exmparily word cloud of the latent topic 0 of the patent section C. The topic is related to microbiology._
 
 ![HOME](wordClouds/G_Topic_1.png)
 
-_Exmparily word cloud of the latent topic 1 of the patent section G is related to processing digital signals and image detection._
+_Exmparily word cloud of the latent topic 1 of the patent section G. The topic is related to processing digital signals and image detection._
 
 ![HOME](wordClouds/G_Topic_3.png)
 
-_Exmparily word cloud of the latent topic 1 of the patent section G is related to sensor technology and measurements._
+_Exmparily word cloud of the latent topic 1 of the patent section G. The topic is related to sensor technology and measurements._
 
 ### Information on the model
 
@@ -137,7 +137,7 @@ Since analysis and understanding of patent data is an extremely relevant topic, 
 
 * The United States Patent and Trading Office for collecting, hosting and providing the patent data
 * A multitude of Stackoverflow users whose questions and answers I found, when looking for a specific coding problem.
-* [1] Suominen, A., & Toivanen, H. (2015). Map of technology: Topic modelling full-text patent data. Paper presented at 5th Global TechMining Conference, GTM 2015, Atlanta, United States.:   https://cris.vtt.fi/en/publications/map-of-technology-topic-modelling-full-text-patent-data
+* [1] Suominen, A., & Toivanen, H. (2015). Map of technology: _Topic modelling full-text patent data._ Paper presented at 5th Global TechMining Conference, GTM 2015, Atlanta, United States.:   https://cris.vtt.fi/en/publications/map-of-technology-topic-modelling-full-text-patent-data
 
 ### Further Reading
 
