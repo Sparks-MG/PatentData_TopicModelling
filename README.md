@@ -43,8 +43,11 @@ The file introduction.ipynb features a CRISP-DM approach and contains further in
 <pre>
 - "app" folder
 | - runWebApp.py            				#flask script which hosts the backend of the dashboard
+| | - folder "example_images_app"			# features example image from the dashboard for the readme
+| |- "static folder"
+| | - various png							# various example word cloud representations
 | |- "templates folder"
-| - master.html  							# main page of web app
+| | - master.html  							# main page of web app
 - "data" folder
 | - "datasets" folder  						# contains the dataset
 | |- ipa200709.zip  						# dataset
@@ -112,7 +115,7 @@ Tokenization of the patent text data is carried out via the libraries nltk and r
 
 The LDA model is able to predict different latent topics for each of the sections and can sucessfully classify the patents in the data set accordingly.
 This classifcation seems to be working well, since the word clouds and the patents with the corresponding topic classifcation match well. 
-However, it is not trivial to differentiate between the different latent topics based on the word cloud representation alone, as some of the topics do not seem distinct enough to a human reader. This is likely related to the data. The test data provided provided by USPTO does equally feature all possible cpc patent sections and thus the quality of each LDA model can vary. A bigger data set might be able to generate a more reliable model and this might be the next step in further improvement.
+However, it is not trivial to differentiate between the different latent topics based on the word cloud representation alone, as some of the topics do not seem distinct enough to a human reader. This is likely related to the data. The test data provided provided by USPTO does not equally feature all possible cpc patent sections and thus the quality of each LDA model can vary. A bigger data set might be able to generate a more reliable model and this might be the next step in further improvement.
 
 
 
