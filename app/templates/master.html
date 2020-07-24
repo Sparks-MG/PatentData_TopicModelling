@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+	
+	<title>Patent Topic Modelling</title>	
+	
+   <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<!-- then Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	
+	<!-- Override! CSS with inline css style !important -->
+	<style type="text/css">
+		body { background: #f8f9fa !important; } 
+	</style
+ 
+
+
+  </head>
+  <body>
+  
+
+  
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand text-light" href="#">Patent Topic Modelling</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active text-light" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link text-light" href="https://developer.uspto.gov/data?search_api_fulltext=&sort_by=field_version_and_date&page=0">Original Dataset</a>
+      <a class="nav-item nav-link text-light" href="https://www.uspto.gov/patents-getting-started/general-information-concerning-patents">Patent Information</a>
+	  <a class="nav-item nav-link text-light" href="https://github.com/Sparks-MG">Contact</a>
+    </div>
+  </div>
+</nav
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="bg-light display-4 ">Patent Topic Modelling Dashboard</h1>
+    <p class="bg-light lead">Analyzing composition and latent topics of USPTO patent data.</p>
+  </div>
+</div>
+
+<div class="container">
+    {% block content %}
+        <div class="page-header">
+            <h1 class="text-center">Information on the analyzed Dataset.</h1>
+        </div>
+    {% endblock %}
+
+    {% for id in ids %}
+        <div id="{{id}}"></div>
+    {% endfor %}
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+     We can see that the patent sections according to CPC classification are not equally represented in the employed data set. Section Y is entirey missing.
+	 Since we have trained a different LDA model for each patent section, the quality for each model might thus vary. 
+	 If we would employ a bigger data set, we would be able generate a more reliable model and even might further refine it by training a model for each patent class, main-group and so on.
+	 We also can see, that there are 3653 different companies mentioned in the data set. Since the data set features barely 7000 patents, many companies only feature one patent.
+	 Also this representation does not yet differentiate between different spellings of the same company, as example 'Samung Electronics Co., Ltd.' and 'SAMSUNG ELECTRONICS CO., LTD.'. 
+	 This is a further good example for messy patent data formatting and needs to be adressed in a future version of this work, were we want to differentiate between different companies.
+	 As this is not relevant to the current scope of the project, we leave it. A look at the patent application dates shows, that most patents in the data set are from around 2019-2020. There are a few earlier patents around 2014 as well, which stretch out the plot abit.
+    </div>
+  </div>
+</div>	
+
+
+ <script type="text/javascript">
+    const graphs = {{graphJSON | safe}};
+    const ids = {{ids | safe}};
+    for(let i in graphs) {
+        Plotly.plot(ids[i], graphs[i].data, graphs[i].layout);
+    }
+</script>
+&nbsp;&nbsp;
+	<div class="page-header">
+		<h1 class="text-center">Results of the Topic Modelling for each Patent Section.</h1>
+		</div>
+<!--</div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+     The results of a topic modelling algorithm can be visualized as  word clouds, were one wordcloud represents a topic. This is a relatively simple and intuitive interpretation of the topics and the patents, however, determining the opimum number of topics in a corpus is not an easy feat. This is an unsupervised task and not all latent topics might be understandable by humans. From the different possible procedures, this model and the number of topics have been optimized via Sklearns Gridsearch algorithm, which states that for each of the 8 patent sections 10 latent topics are hidden in the patent data. Since this results in 80 word clouds, we only visualize a few selected examples in the following. The complete selection of wordclouds is located in the folder "wordClouds".
+	 
+    </div>
+  </div>
+</div>	
+&nbsp;&nbsp;
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+     <u>Exemplary Results of the Topic Modelling for the Patent Section A (Human Necessities):</u>
+    </div>
+  </div>
+</div>	
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+	 <img src='/static/A_Topic_3.png' alt='A_Topic_3'>
+	 <i>Topic 3: chemical compound and mixtures.</i>
+	</div>
+	 <div class="col-sm">
+	 <img src='/static/A_Topic_6.png' alt='A_Topic_6'>
+	 <i>Topic 6: cosmetics and skin care.</i>
+    </div>
+	</div>
+ </div>
+&nbsp;&nbsp;
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+     <u>Exemplary Results of the Topic Modelling for the Patent Section B (Operations and Transport):</u>
+    </div>
+  </div>
+</div>	
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+	<img src='/static/B_Topic_2.png' alt='B_Topic_2'>
+	 <i>Topic 1: in general related to logistics. </i>
+	</div>
+	 <div class="col-sm">
+	 <img src='/static/B_Topic_3.png' alt='B_Topic_3'>
+	 <i>Topic 6:related to storage in logistics.</i>
+    </div>
+	</div>
+ </div>
+
+
+&nbsp;&nbsp;
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+     <u>Exemplary Results of the Topic Modelling for the Patent Section C (Chemistry and Metallurgy):</u>
+    </div>
+  </div>
+</div>	
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+		<img src='/static/C_Topic_0.png' alt='C_Topic_0'>
+	 <i>Topic 0: microbiology or biochemistry.</i>
+	</div>
+	 <div class="col-sm">
+	 <img src='/static/C_Topic_9.png' alt='C_Topic_9'>
+	 <i>Topic 9: related to steel production. </i>
+    </div>
+	</div>
+ </div>
+
+
+
+&nbsp;&nbsp;
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+     <u>Exemplary Results of the Topic Modelling for the Patent Section G (Physics):</u>
+    </div>
+  </div>
+</div>	
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+		<img src='/static/G_Topic_1.png' alt='G_Topic_1'>
+	 <i>Topic 1: processing digital signals and image detection.</i>
+	</div>
+	 <div class="col-sm">
+	 <img src='/static/G_Topic_5.png' alt='G_Topic_5'>
+	 <i>Topic 5: sensor technology and measurements.</i>
+    </div>
+	</div>
+ </div>
+
+&nbsp;&nbsp;
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+     <u>Exemplary Results of the Topic Modelling for the Patent Section H (Electricity):</u>
+    </div>
+  </div>
+</div>	
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+		<img src='/static/H_Topic_1.png' alt='H_Topic_1'>
+	 <i>Topic 1: battery technology.</i>
+	</div>
+	 <div class="col-sm">
+	 <img src='/static/H_Topic_3.png' alt='H_Topic_3'>
+	 <i>Topic 5: Communiation, e.g. internet, television and radio technology</i>
+    </div>
+	</div>
+ </div>
+ 
+ &nbsp;&nbsp;
+ 
+ <div class="container">
+  <div class="row">
+    <div class="col-sm">
+    The LDA model is able to predict different latent topics for each of the sections and can sucessfully classify the patents in the data set accordingly. 
+	The word cloud representation seems to match the patent classification by the lda as as well. However, it is not trivial to differentiate between the different latent topics based on the word cloud representation alone, as some of the topics do not seem distinct enough to a human reader. This is likely related to the data. The test data provided provided by USPTO does not equally feature all possible cpc patent sections and thus the quality of each LDA model can vary. A bigger data set might be able to generate a more reliable model and this might be the next step in further improvement.
+	
+    </div>
+  </div>
+</div>	
+  </body>
+</html>
