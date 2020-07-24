@@ -98,9 +98,9 @@ _Exmparily word cloud of the latent topic 0 of the patent section C. The topic i
 
 _Exmparily word cloud of the latent topic 1 of the patent section G. The topic is related to processing digital signals and image detection._
 
-![HOME](wordClouds/G_Topic_3.png)
+![HOME](wordClouds/G_Topic_5.png)
 
-_Exmparily word cloud of the latent topic 1 of the patent section G. The topic is related to sensor technology and measurements._
+_Exmparily word cloud of the latent topic 5 of the patent section G. The topic is related to sensor technology and measurements._
 
 ### Information on the model
 
