@@ -75,7 +75,7 @@ The file introduction.ipynb features a CRISP-DM approach and contains further in
 
     - To train the lda model for each patent section and classify the csv dataset to the latent topics
         `python model/train_LDA_model.py`
-	- To create the word clouad visualizations
+	- To create the word cloud visualizations
         `python wordClouds/visualize_LDA_model_wordcloud.py`
 
 3. Run the following command in the app's directory to run your web app.
