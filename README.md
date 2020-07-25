@@ -61,26 +61,27 @@ The file introduction.ipynb features a CRISP-DM approach and contains further in
 | - visualize_LDA_model_wordcloud.py  		# The python script which visualizes the top words of each topic
 | - 80 png files							# representing word clouds for the 8 patent sections and 10 topics per patent section
 
--introduction.ipynb   # Jupyter notebook containing CRISP-DM approach & the xml to csv converter of the data
--LICENSE     # license information
--README.md   # the readme
+-introduction.ipynb   						# Jupyter notebook containing CRISP-DM approach & the xml to csv converter of the data
+-LICENSE     								# license information
+-README.md   								# the readme
 </pre>
 
 ### Instructions for locally hosting the app:
 
-1. Run the following commands in your local project directory to set up your datset and model.
+1. Set up the following jupyter notebook in your local project directory to analyze and convert your dataset
+		`introduction.ipynb`
 
-    - To run jupyter notebook which converts the dataset to a csv file
-        `python -i introduction.ipynb`
+2. Run the following commands in your local project directory to set up and model.
+
     - To train the lda model for each patent section and classify the csv dataset to the latent topics
         `python model/train_LDA_model.py`
 	- To create the word clouad visualizations
         `python wordClouds/visualize_LDA_model_wordcloud.py`
 
-2. Run the following command in the app's directory to run your web app.
+3. Run the following command in the app's directory to run your web app.
     `python runWebApp.py`
 
-3. Go to http://127.0.0.1:5000/
+4. Go to http://127.0.0.1:5000/ in your web browser of choice
 
 
 
