@@ -93,20 +93,20 @@ _The dashboard of the project features a navbar with different useful links as w
 
 ![HOME](wordClouds/A_Topic_3.png)
 
-_Exmparily word cloud of the latent topic 3 of the patent section A. The topic is related to chemcial compounds._
+_Exemplary word cloud of the latent topic 3 of the patent section A. The topic is related to chemcial compounds._
 
 
 ![HOME](wordClouds/C_Topic_0.png)
 
-_Exmparily word cloud of the latent topic 0 of the patent section C. The topic is related to microbiology._
+_Exemplary word cloud of the latent topic 0 of the patent section C. The topic is related to microbiology._
 
 ![HOME](wordClouds/G_Topic_1.png)
 
-_Exmparily word cloud of the latent topic 1 of the patent section G. The topic is related to processing digital signals and image detection._
+_Exemplary word cloud of the latent topic 1 of the patent section G. The topic is related to processing digital signals and image detection._
 
 ![HOME](wordClouds/G_Topic_5.png)
 
-_Exmparily word cloud of the latent topic 5 of the patent section G. The topic is related to sensor technology and measurements._
+_Exemplary word cloud of the latent topic 5 of the patent section G. The topic is related to sensor technology and measurements._
 
 ### Information on the model
 
