@@ -16,6 +16,8 @@ CPC - Cooperative Patent Classification:
 * H: Electricity
 * Y: Emerging Cross-Sectional Technologies
 
+The project is published via the BSD-3-Clause License under the following github repository: https://github.com/Sparks-MG/PatentData_TopicModelling.
+
 ### The Dataset
 
 The dataset is open acess and has been originally downloaded from the 'United States Patents and Trading Office' (USPTO) at the 2020-07-07: 
