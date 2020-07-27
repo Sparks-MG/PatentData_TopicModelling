@@ -3,7 +3,7 @@ Analyzing composition and latent topics of USPTO patent data
 
 ## Project Overview
 
-This project is a Capstone Project of **Udacity's** Nanodegree in Data Science. Most of the coding is done via Python, while the frontend of the dashboard has been build via the Bootstrap framework in HTML, JavaScript and CSS.  The project contains a model which can discover the latent, hidden topics in digitalized patent data via a Latent Direchlet Allocation Algorithm and can classify patent data to these latent topics. Additionally, a detailed documentation, an html and flask based dashboard as well as the employed test data set are included as well. The topic model has extracted the latent topics for each CPC patent section and can classify new patents accordingly. The trained model can be further applied to the text of other patents. The latent topics are visualized via wordcloud in the dashboard.
+This project is a Capstone Project of **Udacity's** Nanodegree in Data Science. Most of the coding is done via Python, while the frontend of the dashboard has been build via the Bootstrap framework in HTML, JavaScript and CSS.  The project contains a model which can discover the latent, hidden topics in digized patent data via a Latent Dirichlet Allocation Algorithm and can classify patent data to these latent topics. Additionally, a detailed documentation, an html and flask based dashboard as well as the employed test data set are included as well. The topic model has extracted the latent topics for each CPC patent section and can classify new patents accordingly. The trained model can be further applied to the text of other patents. The latent topics are visualized via wordcloud in the dashboard.
 
 CPC - Cooperative Patent Classification:
 * A: Human Necessities
